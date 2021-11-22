@@ -26,28 +26,30 @@ const Home = () => {
 	}
 
 	return (
-		<div className="container-fluid todos">
-			<h1 className="title">My to do list</h1>
-			<input
-				value={newTask}
-				className="p-2 bg-transparent border-1 box"
-				placeholder="What needs to be done?"
-				id="newTask"
-				onChange={changeValue}
-				onKeyDown={pressEnter}
-			/>
-			<ul className="lists ">
-				{lists.map((list, index) => (
-					<li className="list " key={index}>
-						<span>{list}</span>
-						<i
-							onClick={() => {
-								deleteTask(index);
-							}}
-							className="fas fa-trash-alt delete trash"></i>
-					</li>
-				))}
-			</ul>
+		<div className="notebook">
+			<div className="todos">
+				<h1 className="title">My to do list</h1>
+				<input
+					value={newTask}
+					className="p-2 bg-transparent border-1 box"
+					placeholder="What needs to be done?"
+					id="newTask"
+					onChange={changeValue}
+					onKeyDown={pressEnter}
+				/>
+				<ul className="lists ">
+					{lists.map((list, index) => (
+						<li className="list" key={index}>
+							<span>{list}</span>
+							<i
+								onClick={() => {
+									deleteTask(index);
+								}}
+								className="fas fa-trash-alt delete trash"></i>
+						</li>
+					))}
+				</ul>
+			</div>
 		</div>
 	);
 };
