@@ -1,4 +1,32 @@
 @import "~bootstrap/scss/bootstrap.scss";
+body{
+    background-color: #457b9d;
+}
+ul {padding:0;list-style: none;}
+.todos{
+    margin-top: 24px;
+    border-radius: 20px;
+    width: 70%;
+    background: #F9F9F9;
+
+}
+.title{
+    color: #1d3557;
+    font-family: 'Luckiest Guy', cursive;
+    margin: 24px;
+    font-size: 28px;
+    padding-top: 24px;
+}
+.box{
+
+    border-bottom-color: white;
+    margin-bottom: 10px;
+    
+}
+
+.box :hover{
+    border-bottom-color: #a8dadc;
+}
 
 .tasks{
     .task{
@@ -12,14 +40,40 @@
         }
     }
 }
-/* 
 
-    You can write your own styles here...
+.list {
     
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+    display: flex;
+    align-items : baseline;
+    font-family: 'Caveat', cursive;
+}
 
-*/
+.trash{
+    align-content: space-between;
+    margin-bottom: 20px;
+    color: #e63946;
+}
+
+
+
+
+
+
+.booking-profile {background-color: #fff;
+    border-radius: 12px;
+    border:none;
+    box-shadow: 5px 10px 20px #ccc;}
+    
+.booking-profile .card-title {
+    font-size:14px;
+    text-align:center;
+    font-weight: bold;
+    
+}
+
+
+.reserva-profile {margin-right: 20px;}
+
+.boton-cancelar {padding:8px 10px;border:1px solid rgb(223, 0, 30);border-radius:6px; color:rgb(223, 0, 30)}
+
+.boton-cancelar:hover {border:1px solid rgb(223, 0, 30); color:#fff; background-color: rgb(223, 0, 30);}

@@ -1,9 +1,10 @@
+import { event } from "jquery";
 import { func } from "prop-types";
 import React, { useState } from "react";
 
 //create your first component
 const Home = () => {
-	const [lists, setLists] = useState(["Task", "Task2"]);
+	const [lists, setLists] = useState(["Buy dog food", "Go to swim"]);
 	const [newTask, setNewTask] = useState("");
 
 	function changeValue(event) {
@@ -25,25 +26,25 @@ const Home = () => {
 	}
 
 	return (
-		<div className="container-fluid bg-light">
-			<h1 className="text-center">TODOS</h1>
+		<div className="container-fluid todos">
+			<h1 className="title">My to do list</h1>
 			<input
 				value={newTask}
-				className="p-2 w-100 bg-transparent border-0"
+				className="p-2 bg-transparent border-1 box"
 				placeholder="What needs to be done?"
 				id="newTask"
 				onChange={changeValue}
 				onKeyDown={pressEnter}
 			/>
-			<ul className="lists">
+			<ul className="lists ">
 				{lists.map((list, index) => (
-					<li className="list" key={index}>
+					<li className="list " key={index}>
 						<span>{list}</span>
 						<i
 							onClick={() => {
 								deleteTask(index);
 							}}
-							className="fas fa-trash-alt delete"></i>
+							className="fas fa-trash-alt delete trash"></i>
 					</li>
 				))}
 			</ul>
